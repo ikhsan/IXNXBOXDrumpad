@@ -19,7 +19,10 @@
 		460E6BA41885820A003BC03A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 460E6BA21885820A003BC03A /* InfoPlist.strings */; };
 		460E6BA61885820A003BC03A /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 460E6BA51885820A003BC03A /* ExampleTests.m */; };
 		460E6BB118859868003BC03A /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 460E6BB018859868003BC03A /* MainWindow.m */; };
-		460E6BB418859C98003BC03A /* hid.c in Sources */ = {isa = PBXBuildFile; fileRef = 460E6BB318859C98003BC03A /* hid.c */; };
+		46EF5A371885A32300FFF397 /* IXNXboxDrumpad.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EF5A361885A32300FFF397 /* IXNXboxDrumpad.m */; };
+		46EF5A3A1885A35500FFF397 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EF5A391885A35500FFF397 /* IOKit.framework */; };
+		46EF5A3D1885B65700FFF397 /* hidapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 46EF5A3B1885B65700FFF397 /* hidapi.c */; };
+		46EF5A401885CDAE00FFF397 /* GameDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EF5A3F1885CDAE00FFF397 /* GameDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +57,13 @@
 		460E6BA51885820A003BC03A /* ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTests.m; sourceTree = "<group>"; };
 		460E6BAF18859868003BC03A /* MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
 		460E6BB018859868003BC03A /* MainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
-		460E6BB218859C7F003BC03A /* hidapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hidapi.h; path = hidapi/hidapi/hidapi.h; sourceTree = SOURCE_ROOT; };
-		460E6BB318859C98003BC03A /* hid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hid.c; path = hidapi/mac/hid.c; sourceTree = SOURCE_ROOT; };
+		46EF5A351885A32300FFF397 /* IXNXboxDrumpad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IXNXboxDrumpad.h; path = IXNXboxDrumpad/IXNXboxDrumpad.h; sourceTree = "<group>"; };
+		46EF5A361885A32300FFF397 /* IXNXboxDrumpad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IXNXboxDrumpad.m; path = IXNXboxDrumpad/IXNXboxDrumpad.m; sourceTree = "<group>"; };
+		46EF5A391885A35500FFF397 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		46EF5A3B1885B65700FFF397 /* hidapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hidapi.c; path = IXNXboxDrumpad/hidapi.c; sourceTree = "<group>"; };
+		46EF5A3C1885B65700FFF397 /* hidapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hidapi.h; path = IXNXboxDrumpad/hidapi.h; sourceTree = "<group>"; };
+		46EF5A3E1885CDAE00FFF397 /* GameDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameDevice.h; path = IXNXboxDrumpad/GameDevice.h; sourceTree = "<group>"; };
+		46EF5A3F1885CDAE00FFF397 /* GameDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameDevice.m; path = IXNXboxDrumpad/GameDevice.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46EF5A3A1885A35500FFF397 /* IOKit.framework in Frameworks */,
 				460E6B7C1885820A003BC03A /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +91,7 @@
 		460E6B6F1885820A003BC03A = {
 			isa = PBXGroup;
 			children = (
+				46EF5A381885A33300FFF397 /* IXNXboxDrumpad */,
 				460E6B811885820A003BC03A /* Example */,
 				460E6B9F1885820A003BC03A /* ExampleTests */,
 				460E6B7A1885820A003BC03A /* Frameworks */,
@@ -101,6 +111,7 @@
 		460E6B7A1885820A003BC03A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				46EF5A391885A35500FFF397 /* IOKit.framework */,
 				460E6B7B1885820A003BC03A /* Cocoa.framework */,
 				460E6B9A1885820A003BC03A /* XCTest.framework */,
 				460E6B7D1885820A003BC03A /* Other Frameworks */,
@@ -121,7 +132,6 @@
 		460E6B811885820A003BC03A /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				460E6BB518859CA3003BC03A /* hidapi */,
 				460E6B8D1885820A003BC03A /* AppDelegate.h */,
 				460E6B8E1885820A003BC03A /* AppDelegate.m */,
 				460E6BAF18859868003BC03A /* MainWindow.h */,
@@ -163,13 +173,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		460E6BB518859CA3003BC03A /* hidapi */ = {
+		46EF5A381885A33300FFF397 /* IXNXboxDrumpad */ = {
 			isa = PBXGroup;
 			children = (
-				460E6BB218859C7F003BC03A /* hidapi.h */,
-				460E6BB318859C98003BC03A /* hid.c */,
+				46EF5A3C1885B65700FFF397 /* hidapi.h */,
+				46EF5A3B1885B65700FFF397 /* hidapi.c */,
+				46EF5A3E1885CDAE00FFF397 /* GameDevice.h */,
+				46EF5A3F1885CDAE00FFF397 /* GameDevice.m */,
+				46EF5A351885A32300FFF397 /* IXNXboxDrumpad.h */,
+				46EF5A361885A32300FFF397 /* IXNXboxDrumpad.m */,
 			);
-			name = hidapi;
+			name = IXNXboxDrumpad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,9 +285,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				460E6B8F1885820A003BC03A /* AppDelegate.m in Sources */,
+				46EF5A401885CDAE00FFF397 /* GameDevice.m in Sources */,
 				460E6B881885820A003BC03A /* main.m in Sources */,
+				46EF5A3D1885B65700FFF397 /* hidapi.c in Sources */,
 				460E6BB118859868003BC03A /* MainWindow.m in Sources */,
-				460E6BB418859C98003BC03A /* hid.c in Sources */,
+				46EF5A371885A32300FFF397 /* IXNXboxDrumpad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

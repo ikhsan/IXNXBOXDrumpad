@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "IXNXboxDrumpad.h"
 
 @interface ExampleTests : XCTestCase
 
@@ -14,21 +15,11 @@
 
 @implementation ExampleTests
 
-- (void)setUp
+- (void)testConnectedGamepads
 {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown
-{
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    NSArray *gamepads = [IXNXboxDrumpad connectedGamepads];
+    
+    XCTAssertTrue(gamepads.count > 0, @"The array of gamepads should not be empty (make sure you have connected at least one of xbox gamepad");
 }
 
 @end
