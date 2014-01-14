@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  MainWindow.h
 //  Example
 //
 //  Created by Ikhsan Assaat on 1/14/14.
@@ -7,10 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "MainWindow.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface MainWindow : NSWindow
 
-@property (assign) IBOutlet MainWindow *window;
+- (void)detectGamePads;
+- (void)controlLED:(int)status;
+- (void)showEvent:(int)eventType;
 
 @end

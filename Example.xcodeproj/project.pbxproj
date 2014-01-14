@@ -18,6 +18,8 @@
 		460E6B9C1885820A003BC03A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460E6B7B1885820A003BC03A /* Cocoa.framework */; };
 		460E6BA41885820A003BC03A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 460E6BA21885820A003BC03A /* InfoPlist.strings */; };
 		460E6BA61885820A003BC03A /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 460E6BA51885820A003BC03A /* ExampleTests.m */; };
+		460E6BB118859868003BC03A /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 460E6BB018859868003BC03A /* MainWindow.m */; };
+		460E6BB418859C98003BC03A /* hid.c in Sources */ = {isa = PBXBuildFile; fileRef = 460E6BB318859C98003BC03A /* hid.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,10 @@
 		460E6BA11885820A003BC03A /* ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExampleTests-Info.plist"; sourceTree = "<group>"; };
 		460E6BA31885820A003BC03A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		460E6BA51885820A003BC03A /* ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTests.m; sourceTree = "<group>"; };
+		460E6BAF18859868003BC03A /* MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
+		460E6BB018859868003BC03A /* MainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
+		460E6BB218859C7F003BC03A /* hidapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hidapi.h; path = hidapi/hidapi/hidapi.h; sourceTree = SOURCE_ROOT; };
+		460E6BB318859C98003BC03A /* hid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hid.c; path = hidapi/mac/hid.c; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +121,11 @@
 		460E6B811885820A003BC03A /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				460E6BB518859CA3003BC03A /* hidapi */,
 				460E6B8D1885820A003BC03A /* AppDelegate.h */,
 				460E6B8E1885820A003BC03A /* AppDelegate.m */,
+				460E6BAF18859868003BC03A /* MainWindow.h */,
+				460E6BB018859868003BC03A /* MainWindow.m */,
 				460E6B901885820A003BC03A /* MainMenu.xib */,
 				460E6B931885820A003BC03A /* Images.xcassets */,
 				460E6B821885820A003BC03A /* Supporting Files */,
@@ -152,6 +161,15 @@
 				460E6BA21885820A003BC03A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		460E6BB518859CA3003BC03A /* hidapi */ = {
+			isa = PBXGroup;
+			children = (
+				460E6BB218859C7F003BC03A /* hidapi.h */,
+				460E6BB318859C98003BC03A /* hid.c */,
+			);
+			name = hidapi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +272,8 @@
 			files = (
 				460E6B8F1885820A003BC03A /* AppDelegate.m in Sources */,
 				460E6B881885820A003BC03A /* main.m in Sources */,
+				460E6BB118859868003BC03A /* MainWindow.m in Sources */,
+				460E6BB418859C98003BC03A /* hid.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +484,7 @@
 				460E6BAB1885820A003BC03A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		460E6BAC1885820A003BC03A /* Build configuration list for PBXNativeTarget "ExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +493,7 @@
 				460E6BAE1885820A003BC03A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
