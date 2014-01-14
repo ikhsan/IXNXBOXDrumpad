@@ -11,7 +11,5 @@
 @interface MainWindow : NSWindow
 
 - (void)detectGamePads;
-- (void)controlLED:(int)status;
-- (void)showEvent:(int)eventType;
 
 @end

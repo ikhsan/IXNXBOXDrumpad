@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GameDevice.h"
 
 typedef enum {
     KeyEventPressedArrowUp,
@@ -20,7 +21,7 @@ typedef enum {
     KeyEventPressedBack,
     KeyEventPressedXBOX,
     KeyEventPressedStart,
-    KeyEventReleased = 99
+    KeyEventReleased
 } KeyEventButton;
 
 typedef enum {
@@ -29,7 +30,7 @@ typedef enum {
     KeyEventHitBlue,
     KeyEventHitGreen,
     KeyEventHitOrange,
-    KeyEventPadRelease = 99
+    KeyEventPadRelease
 } KeyEventPad;
 
 typedef enum {
@@ -49,7 +50,6 @@ typedef enum {
     LEDTriggerAlternating = 0x0d
 } LEDTrigger;
 
-@class GameDevice;
 @class IXNXboxDrumpad;
 
 @protocol IXNXboxDrumpadDelegate <NSObject>

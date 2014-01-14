@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "hidapi.h"
 
 @interface GameDevice : NSObject
 

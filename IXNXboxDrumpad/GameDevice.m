@@ -7,7 +7,6 @@
 //
 
 #import "GameDevice.h"
-#import "hidapi.h"
 
 @implementation GameDevice
 

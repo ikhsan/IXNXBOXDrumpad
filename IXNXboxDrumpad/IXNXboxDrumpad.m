@@ -60,8 +60,6 @@
     
     dispatch_queue_t q = dispatch_queue_create("me.ikhsan.xboxdrum", NULL);
     dispatch_async(q, ^{
-        hid_set_nonblocking(_device, 1);
-        
         int res;
         unsigned char buf[65];
         
@@ -98,6 +96,14 @@
                 [self buttonEventIsFired:KeyEventPressedXBOX];
             }
             
+            if (buf[1] == 20 && buf[2] == 32) {
+                [self buttonEventIsFired:KeyEventPressedBack];
+            }
+
+            if (buf[1] == 20 && buf[2] == 16) {
+                [self buttonEventIsFired:KeyEventPressedStart];
+            }
+            
             if (buf[1] == 20 && buf[2] == 1) {
                 [self buttonEventIsFired:KeyEventPressedArrowUp];
             }
@@ -118,6 +124,8 @@
                 [self buttonEventIsFired:KeyEventReleased];
                 [self padEventIsFired:KeyEventPadRelease];
             }
+            
+            usleep(10);
         }
         
     });
@@ -125,7 +133,7 @@
 
 - (void)buttonEventIsFired:(KeyEventButton)buttonEvent
 {
-    if (!self.delegate) return;
+    if (![self.delegate respondsToSelector:@selector(xboxDrumpad:keyEventButton:)]) return;
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.delegate xboxDrumpad:self keyEventButton:buttonEvent];
@@ -134,7 +142,7 @@
 
 - (void)padEventIsFired:(KeyEventPad)padEvent
 {
-    if (!self.delegate) return;
+    if (![self.delegate respondsToSelector:@selector(xboxDrumpad:keyEventPad:)]) return;
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.delegate xboxDrumpad:self keyEventPad:padEvent];
