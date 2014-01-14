@@ -1,10 +1,10 @@
 IXNXboxDrumpad
 ====================
 
-## `IXNXboxDrumpad`: Detect your xbox drum controller in your mac app
-A simple class for detecting your xbox drumpad controller. Using this class, one can detect and use xbox drumpad (or xbox gamepad in general) in your Mac app using pure objective-C code.
+## `IXNXboxDrumpad`: Detect your xbox drum controller in your Mac app
+A simple wrapper for detecting your xbox drumpad controller. Using this class, one can detect and use xbox drumpad (or xbox game controller in general) in your Mac app using pure objective-C code.
 
-Although the implementation is fairly straightforward, but the thing is it worked for me. For code sample for using it, you can check the Example mac project, or if you want to see for gaming usage, check out my [Airplane Shooter](https://github.com/ixnixnixn/AirplaneShooter) sample project.
+Although the implementation is fairly straightforward, but the thing is, it worked for me. For how to use it, please check the Example Mac project, or if you want to see it applied in gaming usage, check out my [Airplane Shooter](https://github.com/ixnixnixn/AirplaneShooter) sample project.
 
 ##Features
 * Detect drumpad hits
@@ -12,8 +12,10 @@ Although the implementation is fairly straightforward, but the thing is it worke
 * Control gamepad's LED
 
 ##Dependencies
+Tested only in Mac OS X 10.9 and Xcode 5.0.2
+
 * [hidapi](https://github.com/signal11/hidapi), a wrapper for USB/Bluetooth communication library
-* Tested only in Mac OS X 10.9 and Xcode 5.0.2
+* `IOKIT` framework
 
 ##License
 
