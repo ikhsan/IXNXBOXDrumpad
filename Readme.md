@@ -4,7 +4,9 @@ IXNXboxDrumpad
 ## Detect your xbox drum controller in your Mac app
 A simple wrapper for detecting your xbox drumpad controller. Using this class, one can detect and use xbox drumpad (or xbox game controller in general) in your Mac app using pure objective-C code.
 
-Although the implementation is fairly straightforward, but the thing is, it worked for me. For how to use it, please check the Example Mac project, or if you want to see it applied in gaming usage, check out my [Airplane Shooter](https://github.com/ixnixnixn/AirplaneShooter) sample project.
+![image](https://raw.github.com/ixnixnixn/IXNXBOXDrumpad/master/madcatz-xbox-drumpad.jpg)
+
+Although the implementation is fairly straightforward, but the thing is, it worked for me using the xbox drum controller from madcatz (like the one in the picture). For how to use it, please check the Example Mac project, or if you want to see it applied in gaming usage, check out my [Airplane Shooter](https://github.com/ixnixnixn/AirplaneShooter) sample project.
 
 ##Features
 * Detect drumpad hits
